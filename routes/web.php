@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', "BaseController@index");
+Route::get('/', "HomeController@index");
 
-Route::get('/login', "BaseController@login");
+Route::get('/login', "HomeController@login");
 
-Route::get('/register', "BaseController@register");
+Route::get('/register', "HomeController@register");

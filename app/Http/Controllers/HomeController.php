@@ -4,18 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BaseController extends Controller
+class HomeController extends Controller
 {
     public function index() {
-        return view("base_index");
+        return view("home_index");
     }
 
     public function login() {
-        return view("base_login");
+        return view("home_login");
     }
 
     public function register() {
-        return view("base_register");
+        return view("home_register");
     }
 
 }
