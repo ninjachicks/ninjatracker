@@ -14,7 +14,8 @@ class HomeController extends Controller
         return view("home_login");
     }
 
-    public function register() {
+    public function register(Request $request) {
+        print_r($request);
         return view("home_register");
     }
 
