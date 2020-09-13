@@ -12,6 +12,12 @@
             You're successfully registered and can now log in
         </div>
 
+        <form method="post" action="">
+            <input type="text" name="nickname">
+            <input type="password" name="password">
+            <button type="submit">Register</button>
+        </form>
+
         <a href="/login">Login</a>
        
 
