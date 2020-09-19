@@ -22,3 +22,5 @@ Route::get('/', "App\Http\Controllers\HomeController@index");
 Route::get('/login', "App\Http\Controllers\HomeController@login");
 
 Route::get('/register', "App\Http\Controllers\HomeController@register");
+
+Route::post('/register', "App\Http\Controllers\HomeController@register");
