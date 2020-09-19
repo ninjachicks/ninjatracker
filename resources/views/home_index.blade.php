@@ -4,17 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>ninjatracker</title>
+        <link rel="stylesheet" href="/css/ninjatracker_main.css">
     </head>
 
     <body>
 
-        <div>
-            ninjatracker platform
-        </div>
+        <div class="nav">
+            ninjatracker
 
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
-       
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+
+        </div>
 
     </body>
 </html>

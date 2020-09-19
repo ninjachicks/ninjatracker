@@ -13,8 +13,9 @@
         </div>
 
         <form method="post" action="">
-            <input type="text" name="nickname">
-            <input type="password" name="password">
+            @csrf
+            <input type="text" name="nickname" required>
+            <input type="password" name="password" required>
             <button type="submit">Register</button>
         </form>
 
