@@ -10,11 +10,13 @@
     <body>
 
         <div class="nav">
-            ninjatracker
-
+            <img class="ninja-logo" src="/images/ninja-logo.png">
             <a href="/login">Login</a>
             <a href="/register">Register</a>
+        </div>
 
+        <div class="logo-start">
+            <img src="/images/logo-start.png">
         </div>
 
     </body>
