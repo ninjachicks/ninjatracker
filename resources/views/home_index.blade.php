@@ -10,7 +10,7 @@
     <body>
 
         <div class="nav">
-            <img class="ninja-logo" src="/images/ninja-logo.png">
+            <a href="/" target="_self"><img class="ninja-logo" src="/images/ninja-logo.png"></a>
             <a href="/login">Login</a>
             <a href="/register">Register</a>
         </div>
@@ -18,6 +18,10 @@
         <div class="logo-start">
             <img src="/images/logo-start.png">
         </div>
+
+        <footer>
+            terms | privacy policy
+        </footer>
 
     </body>
 </html>
