@@ -12,9 +12,9 @@ class LoginController extends Controller
         if ($request->post()) {
             $username = User::where("nickname", $request->post("nickname"))->get();
             if ($username->count()) {
-                echo("login ok");
+                return redirect("/dashboard");
             } else {
-                echo("no such user");
+                return redirect("/login");
             }
         }
 
