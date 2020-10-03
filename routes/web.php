@@ -17,13 +17,12 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', "App\Http\Controllers\HomeController@index");
+Route::get('/', "App\Http\Controllers\HomeController@index")->name("home");
 
-Route::get('/login', "App\Http\Controllers\HomeController@login");
+Route::get('/login', "App\Http\Controllers\LoginController@login");
 
-Route::get('/register', "App\Http\Controllers\HomeController@register");
+Route::post('/login', "App\Http\Controllers\LoginController@login");
 
-Route::post('/register', function(){
-    return view("home_index");
-    /*return redirect()->route("/");*/
-});
+Route::get('/register', "App\Http\Controllers\RegisterController@register");
+
+Route::post('/register', "App\Http\Controllers\RegisterController@register");
