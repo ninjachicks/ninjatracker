@@ -122,7 +122,7 @@ footer {
     opacity: .85;
 }
 
-.input-login {
+.input-field {
     width: 240px;
     height: 40px;
     margin: 20px 0;
@@ -155,6 +155,25 @@ footer {
         background-color: #fff;
         opacity: .9;
         color: #010101;
+    }
+
+.button {
+    text-align: center;
+    color: #010101;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    .button:hover {
+        background-color: #fff;
+        opacity: .9;
+        color: #010101;
+    }
+
+    a.button {
+        text-decoration: none;
     }
 
 .terms, #terms {

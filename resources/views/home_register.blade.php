@@ -25,8 +25,8 @@
 
                 <form method="post" action="">
                     @csrf
-                    <input class="input-login" type="text" name="nickname" value="Username" required><br>
-                    <input class="input-login" type="password" name="password" value="Password" required><br><br>
+                    <input class="input-field" type="text" name="nickname" value="Username" required><br>
+                    <input class="input-field" type="password" name="password" value="Password" required><br><br>
                     <input id="terms" type="checkbox" name="terms-check" value="Terms" required>
                     <label class="terms" for="terms">I accept the <a href="" target="_blank">terms and conditions</a> and have read and understood the <a href="" target="_blank">privacy policy</a>.</label><br>
                     <button class="button-submit" type="submit">Register</button>

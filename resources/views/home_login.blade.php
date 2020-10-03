@@ -25,8 +25,8 @@
 
                 <form method="post" action="">
                     @csrf
-                    <input class="input-login" type="text" name="nickname" value="Username" required><br>
-                    <input class="input-login" type="password" name="password" value="Password" required><br><br>
+                    <input class="input-field" type="text" name="nickname" value="Username" required><br>
+                    <input class="input-field" type="password" name="password" value="Password" required><br><br>
                     <button class="button-submit" type="submit">Login</button>
                 </form>
 
