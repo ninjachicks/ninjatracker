@@ -23,4 +23,7 @@ Route::get('/login', "App\Http\Controllers\HomeController@login");
 
 Route::get('/register', "App\Http\Controllers\HomeController@register");
 
-Route::post('/register', "App\Http\Controllers\HomeController@register");
+Route::post('/register', function(){
+    return view("home_index");
+    /*return redirect()->route("/");*/
+});

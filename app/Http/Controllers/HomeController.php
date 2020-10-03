@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\FuncCall;
 
 class HomeController extends Controller
 {
@@ -16,10 +17,6 @@ class HomeController extends Controller
     }
 
     public function register(Request $request) {
-        
-        /*print_r($request->post());*/
-
-        return view("home_register");
 
         if ($request->post()) {
             $newUser = new User();
@@ -27,6 +24,10 @@ class HomeController extends Controller
             $newUser -> password = $request -> post("password");
             $newUser -> save ();
         }
+
+        /*print_r($request->post());*/
+        return view("home_register");
+        
     }
 
 }
