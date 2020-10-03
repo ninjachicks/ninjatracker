@@ -18,7 +18,10 @@
         <div class="main">
             
             <div class="form-wrapper">
-                <h3>Login</h3><br><br>
+                <h3>Login</h3><br>
+                <div class="terms">
+                    Don't have an account? <a href="/register">Register</a> first.<br><br>
+                </div>
 
                 <form method="post" action="">
                     @csrf
@@ -27,8 +30,10 @@
                     <button class="button-submit" type="submit">Login</button>
                 </form>
 
-                Forgot your username or password?
-                <a href="/login">Do this...</a>
+                <div class="terms">
+                    Forgot your username or password?<br>
+                    <a href="/login">Do this...</a>
+                </div>
             </div>
             
         </div>
