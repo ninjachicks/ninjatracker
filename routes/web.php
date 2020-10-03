@@ -27,4 +27,8 @@ Route::get('/register', "App\Http\Controllers\RegisterController@register");
 
 Route::post('/register', "App\Http\Controllers\RegisterController@register");
 
-Route::get('/dashboard', "App\Http\Controllers\DashboardController@dashboard");
+Route::get('/dashboard', "App\Http\Controllers\DashboardController@get_dashboard");
+
+Route::get('/add_category', "App\Http\Controllers\DashboardController@add_category");
+
+Route::post('/add_category', "App\Http\Controllers\DashboardController@add_category");
