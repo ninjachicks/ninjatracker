@@ -11,8 +11,8 @@
 
         <div class="nav">
             <a href="/" target="_self"><img class="ninja-logo" src="/images/ninja-logo.png"></a>
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/register">Register</a>
         </div>
 
         <div class="logo-start">

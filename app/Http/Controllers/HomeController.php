@@ -16,7 +16,8 @@ class HomeController extends Controller
     }
 
     public function register(Request $request) {
-        print_r($request->post());
+        
+        /*print_r($request->post());*/
 
         if ($request->post()) {
             $newUser = new User();
