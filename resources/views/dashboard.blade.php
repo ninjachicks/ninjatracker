@@ -16,7 +16,13 @@
         </div>
 
         <div class="main">
-            Dashboard
+            <h1>Dashboard</h1>
+            <h3>Welcome, username!</h3>
+            <br><br>
+            Create a new category: <br><br>
+
+            <a class="button" href="/add_category"><div class="button button-submit">Create new category</div></a>
+
         </div>
 
         <footer>
