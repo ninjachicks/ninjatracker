@@ -15,7 +15,10 @@ class DashboardController extends Controller
 
         if (session('user')) {
             echo (session('user'));
-            return view("dashboard", ['username' => session('username'), 'user' => session('user')]);
+            return view(
+                "dashboard", 
+                ['username' => session('username'), 
+                'user' => session('user')]);
         } else {
             return redirect('/');
         }
