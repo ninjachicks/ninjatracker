@@ -9,8 +9,15 @@ class DashboardController extends Controller
 {
     public function get_dashboard() {
 
-        return view("dashboard");
+        session(['off'=>'1, ']);
+        echo (session('off'));
 
+        if (session('user')) {
+            echo (session('user'));
+            return view("dashboard");
+        } else {
+            return redirect('/');
+        }
     }
 
     public function add_category(Request $request) {
