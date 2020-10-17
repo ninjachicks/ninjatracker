@@ -11,8 +11,14 @@
 
         <div class="nav">
             <a href="/" target="_self"><img class="ninja-logo" src="/images/ninja-logo.png"></a>
-            <a class="nav-link" href="/login">Login</a>
-            <a class="nav-link" href="/register">Register</a>
+
+            @if ($user)
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            @else
+                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="/register">Register</a>
+            @endif
+
         </div>
 
         <div class="logo-start">
