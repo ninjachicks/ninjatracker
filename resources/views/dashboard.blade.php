@@ -11,13 +11,15 @@
 
         <div class="nav">
             <a href="/" target="_self"><img class="ninja-logo" src="/images/ninja-logo.png"></a>
+            <a class="nav-link" href="/logout">Logout</a>
             <a class="nav-link" href="/login">Login</a>
             <a class="nav-link" href="/register">Register</a>
         </div>
 
         <div class="main">
             <h1>Dashboard</h1>
-            <h3>Welcome, username!</h3>
+            <h3>Welcome, {{ $username ?? ''}}!</h3>
+            Your ID is {{ $user ?? 'xx' }}.
             <br><br>
             Create a new category: <br><br>
 

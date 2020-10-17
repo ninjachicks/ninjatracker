@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    
     public function get_dashboard() {
 
         session(['off'=>'1, ']);
@@ -14,7 +15,7 @@ class DashboardController extends Controller
 
         if (session('user')) {
             echo (session('user'));
-            return view("dashboard");
+            return view("dashboard", ['username' => session('username'), 'user' => session('user')]);
         } else {
             return redirect('/');
         }

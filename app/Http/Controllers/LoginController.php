@@ -10,9 +10,9 @@ class LoginController extends Controller
     public function login(Request $request) {
 
         if ($request->post()) {
-            $username = User::where("nickname", $request->post("nickname"))->first();
-            if ($username->count()) {
-                session(['user' => $username['id']]);
+            $user = User::where("nickname", $request->post("nickname"))->first();
+            if ($user->count()) {
+                session(['user' => $user['id'], 'username' => $user['nickname']]);
                 return redirect("/dashboard");
             } else {
                 return redirect("/login");

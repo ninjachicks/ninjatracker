@@ -1,5 +1,6 @@
 <?php
 
+use GuzzleHttp\Psr7\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,11 @@ Route::post('/login', "App\Http\Controllers\LoginController@login");
 Route::get('/register', "App\Http\Controllers\RegisterController@register");
 
 Route::post('/register', "App\Http\Controllers\RegisterController@register");
+
+Route::get('/logout', function() {
+    session()->flush();
+    return redirect('/');
+});
 
 Route::get('/dashboard', "App\Http\Controllers\DashboardController@get_dashboard");
 
