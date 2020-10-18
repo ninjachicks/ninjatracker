@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Walkway Black";
+    src: url("/fonts/Walkway Black.ttf?e20913603c55b7bc6a1372986071b897");
+}
+
 body {
     background-image: url(/images/bg-newyork.png?e2f9234f3375c82fb1204dee49a11620);
     background-repeat: no-repeat;
@@ -7,7 +12,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Walkway Black', sans-serif;
     font-size: 16px;
     color: #fff;
 }
@@ -62,9 +67,8 @@ a {
 }
 
 .nav-link:hover {
-    background-color: #ffd906;
+    border-bottom: 2px solid #ffd906;
     opacity: .85;
-    color: #010101; 
 }
 
 .ninja-logo {
@@ -81,14 +85,14 @@ a {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: #e4e4e2;
-    opacity: .65;
+    background-color: #c2beba;
+    opacity: .75;
 }
 
 .logo-start img {
     position: relative;
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 5%;
     width: 260px;
     height: 260px;
 }
