@@ -33,7 +33,7 @@ class DashboardController extends Controller
             return redirect("/dashboard");
         }
 
-        return view("dashboard_add_category");
+        return view("dashboard_add_category", ['user' => session('user')]);
 
     }
 
