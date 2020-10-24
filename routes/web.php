@@ -13,7 +13,7 @@ Route::get('/register', "App\Http\Controllers\HomeController@register");
 Route::post('/register', "App\Http\Controllers\HomeController@register");
 
 Route::get('/logout', function() {
-    session()->flush();
+    session()->flush(); /** Auth kill */
     return redirect('/');
 });
 

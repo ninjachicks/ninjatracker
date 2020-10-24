@@ -13,7 +13,7 @@
         <div class="nav">
             <a href="/" target="_self"><img class="ninja-logo" src="/images/ninja-logo.png"></a>
 
-            @if ($user)
+            @if (Auth::check())
                 <a class="nav-link" href="/dashboard">Dashboard</a>
                 <a class="nav-link" href="/logout">Logout</a>
             @else

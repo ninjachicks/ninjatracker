@@ -162,8 +162,9 @@ footer {
     border: 0;
     border-radius: 0;
     background-color: #ffd906;
-    opacity: .85;
+    opacity: .95;
     line-height: 40px;
+    text-align: center;
     vertical-align: middle;
     color: #010101;
     text-transform: uppercase;
@@ -176,24 +177,11 @@ footer {
         color: #010101;
     }
 
-.button {
-    text-align: center;
-    color: #010101;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-    .button:hover {
-        background-color: #fff;
-        opacity: .9;
-        color: #010101;
-    }
-
-    a.button {
+    a.button-submit {
         text-decoration: none;
+
     }
+
 
 .terms, #terms {
     font-size: 12px;

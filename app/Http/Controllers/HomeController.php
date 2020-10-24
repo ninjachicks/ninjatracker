@@ -3,47 +3,43 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
-
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
 
     public function startApp() {
-        return view("home_index", ['user' => session('user')]);
+        return view("home_index");
     }
 
     public function openTestsite() {
-        return view("test", ['user' => session('user')]);
+        return view("test");
     }
 
     public function login(Request $request) {
 
         if ($request->post()) {
-            $user = User::where("nickname", $request->post("nickname"))->first();
-            if ($user->count()) {
-                session(['user' => $user['id'], 'username' => $user['nickname']]);
+            $credentials = $request -> only('name', 'password');
+            if (Auth::attempt($credentials)) { /** add this to register */
                 return redirect("/dashboard");
-            } else {
-                return redirect("/login");
             }
         }
 
-        return view("home_login", ['user' => session('user')]);
+        return view("home_login");
     }
 
     public function register(Request $request) {
 
         if ($request->post()) {
             $newUser = new User();
-            $newUser -> nickname = $request -> post("nickname");
-            $newUser -> password = $request -> post("password");
+            $newUser -> name = $request -> post("name");
+            $newUser -> password = password_hash($request -> post("password"), PASSWORD_DEFAULT);
             $newUser -> save ();
-            return redirect()->route("home");
-            /*return redirect("/")*/
+            return redirect("/");
         }
 
         /*print_r($request->post());*/
-        return view("home_register", ['user' => session('user')]);
+        return view("home_register");
         
     }
 
