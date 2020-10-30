@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+
     public function get_dashboard() {
 
-        session(['off'=>'1, ']);
-
         if (Auth::check()) {
-            return view("dashboard");
+            $categories = DB::select('select * from categories where parent_id=0');
+            return view("dashboard")->with('categories', $categories);
         } else {
             return redirect('/');
         }
@@ -25,7 +26,8 @@ class DashboardController extends Controller
             $newCategory = new Category();
             $newCategory -> name = $request -> post("name");
             $newCategory -> save ();
-            return redirect("/dashboard");
+            $categories = DB::select('select * from categories where parent_id=0');
+            return redirect("/dashboard")->with('categories', $categories);
         }
 
         return view("dashboard_add_category", ['user' => session('user')]);

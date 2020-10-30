@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         if ($request->post()) {
             $credentials = $request -> only('name', 'password');
-            if (Auth::attempt($credentials)) { /** add this to register */
+            if (Auth::attempt($credentials)) { /** add this to register to be directly logged in after registration*/
                 return redirect("/dashboard");
             }
         }
@@ -35,7 +35,10 @@ class HomeController extends Controller
             $newUser -> name = $request -> post("name");
             $newUser -> password = password_hash($request -> post("password"), PASSWORD_DEFAULT);
             $newUser -> save ();
-            return redirect("/");
+            $credentials = $request -> only('name', 'password');
+            if (Auth::attempt($credentials)) { 
+                return redirect("/dashboard");
+            }
         }
 
         /*print_r($request->post());*/
